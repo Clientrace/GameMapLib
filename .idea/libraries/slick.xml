@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="slick">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../JLML/lib/slick.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://$PROJECT_DIR$/../JLML/lib/natives-windows" />
+    </NATIVE>
+    <SOURCES />
+  </library>
+</component>
