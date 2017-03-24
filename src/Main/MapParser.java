@@ -14,8 +14,9 @@ import java.io.FileReader;
  */
 public class MapParser {
 
-    public static Image[][] solids;
-    public static Image[][] hallows;
+
+    public static TileMap solids;
+    public static TileMap hollows;
 
     public static void load(String path){
         try {
@@ -28,19 +29,26 @@ public class MapParser {
             for (int i = 0; i < amount; i++) {
                 JSONObject layer = (JSONObject) layers.get(i);
                 String type = (String) layer.get("name");
+                int WIDTH = (int)((long) layer.get("width"));
+                int HEIGHT = (int)(long) layer.get("height");
                 switch (type) {
-                    case "block": {
-                        solids = parse((JSONArray) layer.get("data"), (int) layer.get("width"), (int) layer.get("height"));
+                    case "solids": {
+                        System.out.println(" "+layer.get("data"));
+                        Image[][] imgval = parse((JSONArray) layer.get("data"),WIDTH,HEIGHT);
+                        solids = new TileMap(imgval,WIDTH,HEIGHT);
                     }
                     break;
-                    case "hallow": {
-                        hallows = parse((JSONArray) layer.get("data"), (int) layer.get("width"), (int) layer.get("height"));
+                    case "hollow": {
+                        System.out.println(" "+layer.get("data"));
+                        Image[][] imgval = parse((JSONArray) layer.get("data"),WIDTH,HEIGHT);
+                        hollows = new TileMap(imgval,WIDTH,HEIGHT);
                     }
                     break;
                 }
             }
         }catch (Exception e){
             System.out.println("Failed to load map file");
+            e.printStackTrace();
         }
     }
 
@@ -48,10 +56,10 @@ public class MapParser {
         Image[][] layer = new Image[width][height];
         int index;
 
-        for (int y = 0; y < width; y++) {
-            for (int x = 0; x < height; x++) {
-                index = (int)((long)arr.get((y * width) + x));
-                layer[x][y] = getSpriteImage(index);
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                index = (int)((long)arr.get((j * width) + i));
+                layer[i][j] = getSpriteImage(index);
             }
         }
 
@@ -66,9 +74,10 @@ public class MapParser {
         int vertical = sheet.getVerticalCount();
         int horizontal = sheet.getHorizontalCount();
 
-        int y = (index/vertical);
+        int y = (index / vertical);
         int x = (index % horizontal);
 
+        System.out.println("X: "+x+"Y: "+y);
         return sheet.getSubImage(x,y);
     }
 

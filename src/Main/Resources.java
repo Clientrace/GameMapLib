@@ -15,10 +15,11 @@ public class Resources {
     private static Map<String, Image> images;
     private static Map<String, SpriteSheet> sprites;
 
-    public static void init(String filepath, int width, int height){
+    public static void init(String filepath, int size){
         images = new HashMap<>();
+        sprites = new HashMap<>();
         try{
-            images.put("tileset",loadSprite(filepath,width,height));
+            sprites.put("tilesheet",loadSprite(filepath,size,size));
         }catch (Exception e){
             e.printStackTrace();
         }

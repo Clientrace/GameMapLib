@@ -1,5 +1,6 @@
 package States;
 
+import Main.MapHandler;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -15,14 +16,16 @@ public class Test extends BasicGameState {
         return 0;
     }
 
+    private MapHandler map;
+
     @Override
     public void init(GameContainer gameContainer, StateBasedGame stateBasedGame) throws SlickException {
-
+        map = new MapHandler("resources/tileset.png","resources/map.json",32);
     }
 
     @Override
-    public void render(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
-
+    public void render(GameContainer gc, StateBasedGame stateBasedGame, Graphics g) throws SlickException {
+        map.render(g,0,0);
     }
 
     @Override
