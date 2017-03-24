@@ -4,7 +4,7 @@ package PathFinder;
 
 import java.util.ArrayList;
 
-import MapHandler.MapData;
+import Map.MapData;
 
 public class AStar implements PathFinder{
 	private ArrayList closedList = new ArrayList();

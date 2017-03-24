@@ -18,9 +18,6 @@ public class Engine extends StateBasedGame{
         super("GAMEMAPLIB TEST");
     }
 
-    public static final int MENU = 0;
-    public static final int SUMMON = 1;
-    public static final int BATTLE = 2;
 
 
     public static void main(String args[]){
