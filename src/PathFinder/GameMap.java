@@ -1,6 +1,6 @@
 package PathFinder;
 
-import Map.MapData;
+import Main.MapData;
 
 
 public class GameMap implements Map{

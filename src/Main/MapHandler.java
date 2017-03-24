@@ -1,6 +1,5 @@
 package Main;
 
-import PathFinder.Map;
 import org.newdawn.slick.Graphics;
 
 /**
@@ -14,6 +13,7 @@ public class MapHandler {
         this.size = size;
         Resources.init(tileset,size);
         MapParser.load(map);
+        MapData.init();
     }
 
     public void render(Graphics g, float xRender, float yRender){
