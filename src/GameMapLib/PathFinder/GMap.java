@@ -3,12 +3,20 @@ package GameMapLib.PathFinder;
 import GameMapLib.Main.MapData;
 
 
-public class GameMap implements Map{
+public class GMap implements Map{
 
-	public static final int WIDTH = 12;
-	public static final int HEIGHT = 20;
-	public static boolean block = false;
-	public boolean[][] visited = new boolean[WIDTH][HEIGHT];
+	private int WIDTH;
+	private int HEIGHT;
+
+	public static boolean block;
+	public boolean[][] visited;
+
+	public GMap(int WIDTH, int HEIGHT){
+		this.WIDTH = WIDTH;
+		this.HEIGHT = HEIGHT;
+		visited = new boolean[WIDTH][HEIGHT];
+		block = false;
+	}
 	
 	public void clearVisited(){
 		for(int i=0;i<getWidth();i++){
@@ -30,7 +38,7 @@ public class GameMap implements Map{
 	}
 
 	public boolean blocked(int x, int y) {
-		if(MapData.map[y][x]==1)
+		if(MapData.map[x][y]==1)
 			return true;
 		return false;
 	}

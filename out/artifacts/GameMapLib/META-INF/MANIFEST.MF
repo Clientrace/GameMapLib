@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-Description: A simple Java toolkit for JSON
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: com.googlecode.json-simple
+Built-By: fangyidong
+Bnd-LastModified: 1329633057225
+Bundle-ManifestVersion: 2
+Tool: Bnd-1.50.0
+Export-Package: org.json.simple;uses:="org.json.simple.parser";version
+ ="1.1.1",org.json.simple.parser;uses:="org.json.simple";version="1.1.
+ 1"
+Bundle-Name: JSON.simple
+Bundle-Version: 1.1.1
+Build-Jdk: 1.6.0_26
+Created-By: Apache Maven Bundle Plugin
+

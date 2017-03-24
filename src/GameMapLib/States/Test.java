@@ -1,6 +1,6 @@
 package GameMapLib.States;
 
-import GameMapLib.Main.MapHandler;
+import GameMapLib.Main.GameMap;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -16,20 +16,22 @@ public class Test extends BasicGameState {
         return 0;
     }
 
-    private MapHandler map;
+    private GameMap map;
 
     @Override
     public void init(GameContainer gameContainer, StateBasedGame stateBasedGame) throws SlickException {
-        map = new MapHandler("resources/tileset.png","resources/map.json",32);
+        map = new GameMap("resources/tileset.png","resources/map.json",32);
+        CharHandler.init();
     }
 
     @Override
     public void render(GameContainer gc, StateBasedGame stateBasedGame, Graphics g) throws SlickException {
         map.render(g,0,0);
+        CharHandler.render(g);
     }
 
     @Override
-    public void update(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) throws SlickException {
-
+    public void update(GameContainer gc, StateBasedGame stateBasedGame, int i) throws SlickException {
+        CharHandler.update(gc);
     }
 }

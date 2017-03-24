@@ -5,11 +5,11 @@ import org.newdawn.slick.Graphics;
 /**
  * Created by Clientrace on 24/03/2017.
  */
-public class MapHandler {
+public class GameMap {
 
     private int size;
 
-    public MapHandler(String tileset, String map, int size){
+    public GameMap(String tileset, String map, int size){
         this.size = size;
         Resources.init(tileset,size);
         MapParser.load(map);
