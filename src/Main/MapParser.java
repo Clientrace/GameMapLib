@@ -17,6 +17,8 @@ public class MapParser {
 
     public static TileMap solids;
     public static TileMap hollows;
+    public static int WIDTH;
+    public static int HEIGHT;
 
     public static void load(String path){
         try {
@@ -29,8 +31,9 @@ public class MapParser {
             for (int i = 0; i < amount; i++) {
                 JSONObject layer = (JSONObject) layers.get(i);
                 String type = (String) layer.get("name");
-                int WIDTH = (int)((long) layer.get("width"));
-                int HEIGHT = (int)(long) layer.get("height");
+                WIDTH = (int)((long) layer.get("width"));
+                HEIGHT = (int)(long) layer.get("height");
+
                 switch (type) {
                     case "solids": {
                         System.out.println(" "+layer.get("data"));
