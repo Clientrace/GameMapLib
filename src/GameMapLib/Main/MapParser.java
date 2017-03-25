@@ -17,6 +17,7 @@ public class MapParser {
 
     public static TileMap solids;
     public static TileMap hollows;
+    public static TileMap spawnpoints;
     public static int WIDTH;
     public static int HEIGHT;
 
@@ -45,6 +46,12 @@ public class MapParser {
                         System.out.println(" "+layer.get("data"));
                         Image[][] imgval = parse((JSONArray) layer.get("data"),WIDTH,HEIGHT);
                         hollows = new TileMap(imgval,WIDTH,HEIGHT);
+                    }
+                    break;
+                    case "spawnpoints": {
+                        System.out.println(" "+layer.get("data"));
+                        Image[][] imgval = parse((JSONArray) layer.get("data"),WIDTH,HEIGHT);
+                        spawnpoints = new TileMap(imgval,WIDTH,HEIGHT);
                     }
                     break;
                 }
@@ -77,8 +84,12 @@ public class MapParser {
         int vertical = sheet.getVerticalCount();
         int horizontal = sheet.getHorizontalCount();
 
-        int y = (index / vertical);
+
         int x = (index % horizontal);
+        int y = (index / vertical);
+
+        System.out.println(horizontal);
+        System.out.println("INDEX: "+index+" X: "+x+" Y: "+y);
 
         System.out.println("X: "+x+"Y: "+y);
         return sheet.getSubImage(x,y);

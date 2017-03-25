@@ -20,7 +20,7 @@ public class Test extends BasicGameState {
 
     @Override
     public void init(GameContainer gameContainer, StateBasedGame stateBasedGame) throws SlickException {
-        map = new GameMap("resources/tileset.png","resources/map.json",32);
+        map = new GameMap("resources/tileset.png","resources/map.json",20);
         CharHandler.init();
     }
 
