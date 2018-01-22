@@ -9,13 +9,8 @@ import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
 /* LOCAL CONSTANTS */
-
-
-
-
 import ggj_game.input.P_Keyboard_Input;
 import ggj_game.states.C_State_ID;
-/* CONTROLS */
 
 public class P_State_Menu extends BasicGameState implements KeyListener{
 	/* ASSIGN STATE ID */

@@ -5,10 +5,10 @@ package ggj_game.window;
 public class S_Window {
 	
 	/* WINDOW SIZE HEIGHT */
-	public static int Height = C_Window_Settings.SIZE_H_700;
+	public static int Height = C_Window_Settings.SIZE_H;
 	
 	/* WINDOW SIZE WIDTH */
-	public static int Width = C_Window_Settings.SIZE_W_500;
+	public static int Width = C_Window_Settings.SIZE_W;
 	
 	/* WINDOWED SETTINGS */
 	public static boolean isWindowed = C_Window_Settings.WINDOWED;
