@@ -1,7 +1,8 @@
-package main;
+package ggj_game.engine;
 
 /* KEYBOARD CONTROL */
-import input.P_Keyboard_Input;
+import ggj_game.input.P_Keyboard_Input;
+import ggj_game.window.S_Window;
 
 /* JAVA LIBRARIES */
 import java.io.File;
@@ -11,11 +12,6 @@ import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
-
-/* LOCAL SETTINGS*/
-import settings.S_State;
-import settings.S_Engine;
-import settings.S_Window;
 
 public class P_Engine extends StateBasedGame{
 	/* WINDOWS NAME SETTINGS */
@@ -62,12 +58,12 @@ public class P_Engine extends StateBasedGame{
         gc.setVSync( S_Engine.vsync );
         
         /* INITIALIZE STATES */
-        for( int stateCounter = 0; stateCounter < S_State.StateList.length; stateCounter++ ){
-        	this.addState( S_State.StateList[stateCounter] );
+        for( int stateCounter = 0; stateCounter < ggj_game.states.S_State.StateList.length; stateCounter++ ){
+        	this.addState( ggj_game.states.S_State.StateList[stateCounter] );
         }
 
         /* ENTER INITIAL STATE */
-        this.enterState( S_State.initialState );
+        this.enterState( ggj_game.states.S_State.initialState );
 
     }
 }

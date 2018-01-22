@@ -1,6 +1,6 @@
-package constants;
+package ggj_game.engine;
 
-public class C_ENGINE_SETTINGS {
+public class C_Engine_Settings {
 	/* LOGIC UPDATE INTERVAL */
 	public static final int LOGIC_INTERVAL_60 			= 60;
 	

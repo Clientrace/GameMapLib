@@ -1,4 +1,4 @@
-package input;
+package ggj_game.input;
 
 /* LWJGL LIBRARY */
 import org.lwjgl.input.Keyboard;
@@ -9,7 +9,6 @@ import java.util.ArrayList;
 
 public class P_Keyboard_Input {
 	private static ArrayList<Integer> KeyInput;
-	private static Object[] KeypressArray;
 	
 	/* INITIALIZE KEYPRESS CONTAINER */
 	public static void initialize(){

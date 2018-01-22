@@ -1,4 +1,4 @@
-package states;
+package ggj_game.states.menu;
 
 /* LWJGL LIBRARY */
 import org.lwjgl.input.Keyboard;
@@ -9,15 +9,18 @@ import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
 /* LOCAL CONSTANTS */
-import constants.C_STATE_ID;
 
+
+
+
+import ggj_game.input.P_Keyboard_Input;
+import ggj_game.states.C_State_ID;
 /* CONTROLS */
-import input.P_Keyboard_Input;
 
 public class P_State_Menu extends BasicGameState implements KeyListener{
 	/* ASSIGN STATE ID */
     public int getID() {
-        return C_STATE_ID.MENU;
+        return C_State_ID.MENU;
     }
 
     /* INITIALIZE STATE VARIABLES */

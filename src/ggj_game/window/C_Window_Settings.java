@@ -1,6 +1,6 @@
-package constants;
+package ggj_game.window;
 
-public class C_WINDOW_SETTINGS {
+public class C_Window_Settings {
 	/* WINDOW SIZE HEIGHT */
 	public static final int SIZE_W_500 				= 500;
 	
