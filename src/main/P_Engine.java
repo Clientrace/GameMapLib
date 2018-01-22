@@ -1,5 +1,9 @@
 package main;
 
+/* KEYBOARD CONTROL */
+import input.P_Keyboard_Input;
+
+/* JAVA LIBRARIES */
 import java.io.File;
 
 /* SLICK LIBRARY */
@@ -36,6 +40,9 @@ public class P_Engine extends StateBasedGame{
             system.setDisplayMode( 	S_Window.Width , 
 				            		S_Window.Height , 
 				            		S_Window.isWindowed );
+            
+            /* INITIALIZE KEYBOARD CONTROL */
+            P_Keyboard_Input.initialize();
             
             /* START ENGINE */
             system.start();

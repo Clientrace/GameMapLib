@@ -29,11 +29,16 @@ public class P_State_Menu extends BasicGameState {
     public void render(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
     	graphics.drawString("<~ Menu", 34, 30);
         graphics.drawString("Keyboard Controls: (Test your Keyboard)", 50, 80);
-    
+        
+        if( P_Keyboard_Input.isPressed(Keyboard.KEY_SPACE) ){
+        	graphics.drawString("SPACE BAR", 100, 100);
+        }
+        
     }
     
     /* UPDATE STATE VARIABLES */
     public void update(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) throws SlickException {
     	P_Keyboard_Input.updateInput();
+    	P_Keyboard_Input.printControls();
     }
 }
