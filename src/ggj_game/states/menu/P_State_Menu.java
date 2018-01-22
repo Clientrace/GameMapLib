@@ -38,11 +38,38 @@ public class P_State_Menu extends BasicGameState implements KeyListener{
         	graphics.drawString("SPACE + A + B", 200, 200);
         }
         
+        graphics.drawString(String.valueOf(V_State_Menu.EventVar), 2, 2);
+        
     }
     
     /* UPDATE STATE VARIABLES */
     public void update(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) throws SlickException {
     	P_Keyboard_Input.printControls();
+    	updateEvent();
+    }
+    
+    /* CONTROL EVENT PROCESSING */
+    public void updateEvent(){
+    	/* CONTROLS */
+    	/* TEST CONTROL */
+    	if(P_Keyboard_Input.isPressed(Keyboard.KEY_1)){
+    		L_State_Menu.event1();
+    	}
+    	if(P_Keyboard_Input.isPressed(Keyboard.KEY_2)){
+    		L_State_Menu.event2();
+    	}
+    	if(P_Keyboard_Input.isPressed(Keyboard.KEY_3)){
+    		L_State_Menu.event3();
+    	}
+    	if(P_Keyboard_Input.isPressed(Keyboard.KEY_4)){
+    		L_State_Menu.event4();
+    	}
+    	if(P_Keyboard_Input.isPressed(Keyboard.KEY_5)){
+    		L_State_Menu.event5();
+    	}
+    	if(P_Keyboard_Input.isPressed(Keyboard.KEY_5, Keyboard.KEY_6)){
+    		L_State_Menu.event6();
+    	}
     }
     
     /* INPUT LISTENERS */
