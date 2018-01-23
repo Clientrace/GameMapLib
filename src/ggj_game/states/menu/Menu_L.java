@@ -1,6 +1,6 @@
 package ggj_game.states.menu;
 
-public class L_State_Menu {
+public class Menu_L {
 	
 	
 	public static void getMessage(Object input){
@@ -8,21 +8,21 @@ public class L_State_Menu {
 	}
 	
 	public static void event1(){
-		V_State_Menu.EventVar = 1;
+		Menu_V.EventVar = 1;
 	}
 	public static void event2(){
-		V_State_Menu.EventVar = 2;
+		Menu_V.EventVar = 2;
 	}
 	public static void event3(){
-		V_State_Menu.EventVar = 3;
+		Menu_V.EventVar = 3;
 	}
 	public static void event4(){
-		V_State_Menu.EventVar = 4;
+		Menu_V.EventVar = 4;
 	}
 	public static void event5(){
-		V_State_Menu.EventVar = 5;
+		Menu_V.EventVar = 5;
 	}
 	public static void event6(){
-		V_State_Menu.EventVar = 6;
+		Menu_V.EventVar = 6;
 	}
 }

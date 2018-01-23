@@ -1,6 +1,6 @@
 package ggj_game.window;
 
-public class C_Window_Settings {
+public class Window_C {
 	/* WINDOW SIZE HEIGHT */
 	public static final int SIZE_W 				= 800;
 	

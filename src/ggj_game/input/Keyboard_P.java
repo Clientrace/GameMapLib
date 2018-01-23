@@ -7,7 +7,7 @@ import org.lwjgl.input.Keyboard;
 /* JAVA LIBRARY */
 import java.util.ArrayList;
 
-public class P_Keyboard_Input {
+public class Keyboard_P {
 	private static ArrayList<Integer> KeyInput;
 	
 	/* INITIALIZE KEYPRESS CONTAINER */
@@ -31,12 +31,7 @@ public class P_Keyboard_Input {
 	
 	/* PRINTS ALL PRESSED KEYS TO CONSOLE */
 	public static void printControls(){
-		System.out.print("{ ");
-		for(Integer keyPressed : KeyInput){
-			System.out.print(keyPressed + " ");
-		}
-		System.out.println(" }");
-		
+		System.out.println(KeyInput.toString());
 	}
 	
 	/* RETURNS AN ARRAY OF PRESSED KEYS */
@@ -46,6 +41,16 @@ public class P_Keyboard_Input {
 	
 	/* RETURNS TRUE IF ALL OF THE PARAMETERS ARE PRESSED */
 	public static boolean isPressed(int... args){
+		for(int a=0; a<args.length;a++){
+			if(!KeyInput.contains(args[a])){
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	/* RETURNS TRUE IF THE SEQUENCE OF KEYS ARE PRESSED */
+	public static boolean isSequence(int... args){
 		for(int a=0; a<args.length;a++){
 			if(!KeyInput.contains(args[a])){
 				return false;

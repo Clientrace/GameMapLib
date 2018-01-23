@@ -1,7 +1,7 @@
 package ggj_game.engine;
 
-import ggj_game.input.P_Keyboard_Input;
-import ggj_game.window.S_Window;
+import ggj_game.input.Keyboard_P;
+import ggj_game.window.Window_S;
 
 import java.io.File;
 
@@ -12,23 +12,23 @@ public class Main {
 	/* CLASS MAIN */
     public static void main(String args[]){
     	/* SET NATIVES */
-        File f = new File( S_Engine.natives );
+        File f = new File( Engine_S.natives );
         
         if(f.exists()){
         	/* SET LIBRARY */
-            System.setProperty( S_Engine.library ,f.getAbsolutePath());
+            System.setProperty( Engine_S.library ,f.getAbsolutePath());
         }
         try{
         	/* INITIALIZE ENGINE */
-            AppGameContainer system = new AppGameContainer(new P_Engine());
+            AppGameContainer system = new AppGameContainer(new Engine_P());
             
             /* WINDOW SETTINGS */
-            system.setDisplayMode( 	S_Window.Width , 
-				            		S_Window.Height , 
-				            		S_Window.isWindowed );
+            system.setDisplayMode( 	Window_S.Width , 
+				            		Window_S.Height , 
+				            		Window_S.isWindowed );
             
             /* INITIALIZE KEYBOARD CONTROL */
-            P_Keyboard_Input.initialize();
+            Keyboard_P.initialize();
             
             /* START ENGINE */
             system.start();
