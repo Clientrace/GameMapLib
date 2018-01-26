@@ -12,7 +12,7 @@ import org.newdawn.slick.state.StateBasedGame;
 import ggj_game.input.Keyboard_P;
 import ggj_game.states.StateID_C;
 
-public class Menu_P extends BasicGameState implements KeyListener, MouseListener{
+public class Menu_P extends BasicGameState implements bKeyListener, MouseListener{
 	private int frameCount = 0;
 	private int animX = 0;
 	private int animY = 0;
